@@ -1,0 +1,30 @@
+{
+    "name": "saulius/kh002",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Saulius\\Kh002\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "saulius334",
+            "email": "105633620+saulius334@users.noreply.github.com"
+        }
+    ],
+    "require-dev": {
+        "phpstan/phpstan": "^1.8",
+        "phpunit/phpunit": "^9.5"
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.5"
+    },
+    "scripts": {
+        "phpstan": "./vendor/bin/phpstan analyse -c phpstan.neon.dist --memory-limit=2G",
+        "phpunit": "./vendor/bin/phpunit -c ./phpunit.xml.dist",
+        "all" : [
+            "@phpstan",
+            "@phpunit"
+        ]
+    }
+}
