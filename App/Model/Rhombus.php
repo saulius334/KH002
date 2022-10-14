@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Model;
+namespace Saulius\Kh002\App\Model;
 
-use App\Interfaces\Geometry;
+use Saulius\Kh002\App\Interfaces\Shape;
 
-class Rectangle implements Geometry {
+class Rhombus implements Shape {
     public function __construct($side)
     {
      
     }
     
-    public function calcPerimeter() {
+    public function calcPerimeter() : float {
         $perimeter =  $this->side * 4;
         return $perimeter;
     }
