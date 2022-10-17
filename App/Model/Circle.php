@@ -1,20 +1,19 @@
 <?php
 
-namespace Saulius\Kh002\App\Model;
+namespace App\Model;
 
+use App\Interfaces\Shape;
 
-
-use Saulius\Kh002\App\Interfaces\Shape;
-
-class Circle implements Shape {
-    public function __construct($radius)
+class Circle implements Shape
+{
+    public function __construct(float $radius)
     {
-     
+        $this->radius = $radius;
     }
-    
-    public function calcPerimeter() : float {
+
+    public function calcPerimeter(): float
+    {
         $perimeter =  2 * pi() * $this->radius;
         return $perimeter;
     }
-
 }

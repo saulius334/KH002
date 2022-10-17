@@ -1,17 +1,19 @@
 <?php
 
-namespace Saulius\Kh002\Tests\Unit;
+namespace Tests\Unit;
 
-use Saulius\Kh002\App\Model\Rectangle;
+use App\Model\Rectangle;
 use PHPUnit\Framework\TestCase;
 
 use function PHPUnit\Framework\assertEquals;
 
 final class RectangleTest extends TestCase
 {
-    public function test_if_rectangle_works() : void {
-        $sqr = new Rectangle(5, 5);
-        assertEquals($sqr, 5);
-        assertEquals($sqr->calcPerimeter(), 5 * 4);
+    public function testIfRectangleWorks(): void
+    {
+        $rectangle = new Rectangle(123, 321);
+        // assertEquals($rectangle->sideA, 123);
+        // assertEquals($rectangle->sideB, 321);
+        assertEquals($rectangle->calcPerimeter(), 123 * 2 + 321 * 2);
     }
 }

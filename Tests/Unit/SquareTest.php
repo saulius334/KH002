@@ -9,9 +9,10 @@ use function PHPUnit\Framework\assertEquals;
 
 final class SquareTest extends TestCase
 {
-    public function test_if_square_works() : void {
-        $sqr = new Square(5);
-        assertEquals($sqr, 5);
-        assertEquals($sqr->calcPerimeter(), 5 * 4);
+    public function testIfSquareWorks(): void
+    {
+        $square = new Square(321);
+        // assertEquals($square->side, 321);
+        assertEquals($square->calcPerimeter(), 321 * 4);
     }
 }

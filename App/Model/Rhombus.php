@@ -1,18 +1,19 @@
 <?php
 
-namespace Saulius\Kh002\App\Model;
+namespace App\Model;
 
-use Saulius\Kh002\App\Interfaces\Shape;
+use App\Interfaces\Shape;
 
-class Rhombus implements Shape {
-    public function __construct($side)
+class Rhombus implements Shape
+{
+    public function __construct(float $side)
     {
-     
+        $this->side = $side;
     }
-    
-    public function calcPerimeter() : float {
+
+    public function calcPerimeter(): float
+    {
         $perimeter =  $this->side * 4;
         return $perimeter;
     }
-
 }

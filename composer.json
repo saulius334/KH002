@@ -3,7 +3,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Saulius\\Kh002\\": "src/"
+            "Saulius\\Kh002\\": "src/",
+            "App\\": "App/"
         }
     },
     "authors": [
@@ -14,15 +15,18 @@
     ],
     "require-dev": {
         "phpstan/phpstan": "^1.8",
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.7"
     },
     "require": {
         "guzzlehttp/guzzle": "^7.5"
     },
     "scripts": {
+        "phpcs": "./vendor/bin/phpcs -p --standard=phpcs.xml.dist",
         "phpstan": "./vendor/bin/phpstan analyse -c phpstan.neon.dist --memory-limit=2G",
         "phpunit": "./vendor/bin/phpunit -c ./phpunit.xml.dist",
         "all" : [
+            "@phpcs",
             "@phpstan",
             "@phpunit"
         ]

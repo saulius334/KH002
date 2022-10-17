@@ -1,8 +1,8 @@
 <?php
 
-namespace Saulius\Kh002\App\Interfaces;
+namespace App\Interfaces;
 
-interface Shape {
-    public function calcPerimeter() : float;
+interface Shape
+{
+    public function calcPerimeter(): float;
 }
-
