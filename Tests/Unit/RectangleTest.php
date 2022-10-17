@@ -12,8 +12,6 @@ final class RectangleTest extends TestCase
     public function testIfRectangleWorks(): void
     {
         $rectangle = new Rectangle(123, 321);
-        // assertEquals($rectangle->sideA, 123);
-        // assertEquals($rectangle->sideB, 321);
         assertEquals($rectangle->calcPerimeter(), 123 * 2 + 321 * 2);
     }
 }

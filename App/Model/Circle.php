@@ -6,9 +6,8 @@ use App\Interfaces\Shape;
 
 class Circle implements Shape
 {
-    public function __construct(float $radius)
+    public function __construct(private float $radius)
     {
-        $this->radius = $radius;
     }
 
     public function calcPerimeter(): float

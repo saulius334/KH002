@@ -25,6 +25,7 @@
         "phpcs": "./vendor/bin/phpcs -p --standard=phpcs.xml.dist",
         "phpstan": "./vendor/bin/phpstan analyse -c phpstan.neon.dist --memory-limit=2G",
         "phpunit": "./vendor/bin/phpunit -c ./phpunit.xml.dist",
+        "fix" : "./vendor/bin/phpcbf --standard=phpcs.xml.dist  --extensions=php",
         "all" : [
             "@phpcs",
             "@phpstan",

@@ -12,7 +12,6 @@ final class SquareTest extends TestCase
     public function testIfSquareWorks(): void
     {
         $square = new Square(321);
-        // assertEquals($square->side, 321);
         assertEquals($square->calcPerimeter(), 321 * 4);
     }
 }

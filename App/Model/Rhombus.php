@@ -6,9 +6,8 @@ use App\Interfaces\Shape;
 
 class Rhombus implements Shape
 {
-    public function __construct(float $side)
+    public function __construct(private float $side)
     {
-        $this->side = $side;
     }
 
     public function calcPerimeter(): float

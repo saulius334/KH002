@@ -6,10 +6,8 @@ use App\Interfaces\Shape;
 
 class Rectangle implements Shape
 {
-    public function __construct(float $sideA, float $sideB)
+    public function __construct(private float $sideA, private float $sideB)
     {
-        $this->sideA = $sideA;
-        $this->sideB = $sideB;
     }
 
     public function calcPerimeter(): float
