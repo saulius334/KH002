@@ -1,7 +1,8 @@
 parameters:
   paths:
     - src
-    - tests
+    - Tests
+    - app
 
   level: 8
 
